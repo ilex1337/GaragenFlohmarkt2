@@ -487,6 +487,9 @@
       <button class="tab-btn active" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-anmeldung').classList.add('active');this.classList.add('active')">📋 Anmeldung</button>
       <button class="tab-btn" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-laufkarte').classList.add('active');this.classList.add('active')">🗺 Laufkarte</button>
       <button class="tab-btn" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-wegeplan').classList.add('active');this.classList.add('active')">📍 Wegeplan</button>
+      <button class="tab-btn" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-einnahmen').classList.add('active');this.classList.add('active')">💰 Einnahmen</button>
+      <button class="tab-btn" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-impressum').classList.add('active');this.classList.add('active')">📄 Impressum</button>
+      <button class="tab-btn" onclick="document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('tab-haftung').classList.add('active');this.classList.add('active')">⚖️ Haftungsausschluss</button>
     </div>
   </div>
 </header>
@@ -504,13 +507,13 @@
     <div style="background:#fff;border-radius:10px;padding:28px 32px;border-left:5px solid var(--green);box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:24px;">
       <div class="section-label" style="color:var(--green);">Anmeldung per E-Mail</div>
       <div style="font-size:20px;font-weight:700;color:var(--blue);margin-bottom:8px;">
-        <a href="/cdn-cgi/l/email-protection#ed8684998cc09a8499998188839e9a888481889fad889bc086848f8897c08b899ec38988" style="color:var(--blue);text-decoration:none;"><span class="__cf_email__" data-cfemail="4a21233e2b673d233e3e262f24393d2f23262f380a2f3c672123282f30672c2e39642e2f">[email&#160;protected]</span></a>
+        <a href="mailto:kita-wittlensweiler@ev-kibez-fds.de" style="color:var(--blue);text-decoration:none;">kita-wittlensweiler@ev-kibez-fds.de</a>
       </div>
       <div style="font-size:13px;color:#555;margin-bottom:24px;">Anmeldeschluss: <strong>Donnerstag, 30. April 2026</strong></div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div style="background:var(--light-blue);border-radius:8px;padding:16px 20px;border-top:3px solid var(--blue);">
-          <div style="font-size:9px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">Standgebühr</div>
+          <div style="font-size:9px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">Unkostenbeitrag</div>
           <div style="font-size:28px;font-weight:900;color:var(--blue);">8 €</div>
           <div style="font-size:11px;color:#666;margin-top:4px;">pro Verkaufsstand</div>
         </div>
@@ -528,7 +531,7 @@
         <li>✅ Jeder Haushalt im Ort kann teilnehmen</li>
         <li>✅ Bei der Anmeldung den Verkaufsort angeben: Garage, Hof oder Garten</li>
         <li>✅ Gerne eine Verkaufskategorie angeben</li>
-        <li>✅ Standgebühr muss in der Kita bezahlt werden</li>
+        <li>✅ Unkostenbeitrag muss in der Kita bezahlt werden</li>
       </ul>
     </div>
 
@@ -596,30 +599,6 @@
       <div class="wegeplan-qr-card">
         <h3>Wegeplan herunterladen</h3>
         <p>Lade den Wegeplan als PDF herunter und finde alle Garagen-Standorte auf einen Blick.</p>
-        <div style="margin-top:auto; padding-top:20px;">
-          <a href="wegeplan.pdf" download style="
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--blue);
-            color: #fff;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 14px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.2s ease;
-          " onmouseover="this.style.background='#122058'" onmouseout="this.style.background='#1a2f6e'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Wegeplan als PDF
-          </a>
-        </div>
 
       </div>
 
@@ -642,6 +621,130 @@
 
   </div>
 
+  <!-- ═══════ EINNAHMEN TAB ═══════ -->
+  <div class="tab-panel" id="tab-einnahmen">
+    <div class="laufkarte-hero" style="background:var(--light-yellow);border-top-color:var(--yellow);">
+      <div class="section-label" style="color:#a07800;">Einnahmen &amp; Verwendung</div>
+      <p>Alle Einnahmen kommen direkt der Kita Wittlensweiler zugute.</p>
+    </div>
+    <div style="background:#fff;border-radius:10px;padding:28px 32px;border-left:5px solid var(--yellow);box-shadow:0 2px 12px rgba(0,0,0,.08);font-size:14px;line-height:1.8;color:#333;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a07800;margin-bottom:14px;">Verwendung der Einnahmen</div>
+      <p style="margin-bottom:20px;">Die im Rahmen des Garagenflohmarkts erzielten Einnahmen – einschließlich der Verwaltungsgebühren sowie der Erlöse aus dem Essensverkauf und dem Kinderschminken – werden ausschließlich für Zwecke der Kita Wittlensweiler verwendet.</p>
+      <p>Nach Abzug der zur Durchführung der Veranstaltung erforderlichen Organisationskosten (z.&nbsp;B. Werbematerialien, Verwaltungs‑ oder Genehmigungsgebühren) fließen sämtliche verbleibenden Mittel in die Anschaffung von Einrichtungsgegenständen und Materialien für die Kita.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:20px;">
+      <div style="background:var(--light-yellow);border-radius:10px;padding:20px;text-align:center;border-top:4px solid var(--yellow);">
+        <div style="font-size:28px;margin-bottom:8px;">🏷️</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#a07800;margin-bottom:4px;">Unkostenbeitrag</div>
+        <div style="font-size:12px;color:#666;">8 € pro Verkaufsstand</div>
+      </div>
+      <div style="background:var(--light-yellow);border-radius:10px;padding:20px;text-align:center;border-top:4px solid var(--yellow);">
+        <div style="font-size:28px;margin-bottom:8px;">🍔</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#a07800;margin-bottom:4px;">Essensverkauf</div>
+        <div style="font-size:12px;color:#666;">Maultaschenburger &amp; Getränke</div>
+      </div>
+      <div style="background:var(--light-yellow);border-radius:10px;padding:20px;text-align:center;border-top:4px solid var(--yellow);">
+        <div style="font-size:28px;margin-bottom:8px;">🎪</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#a07800;margin-bottom:4px;">Kinderschminken</div>
+        <div style="font-size:12px;color:#666;">gegen kleinen Unkostenbeitrag</div>
+      </div>
+    </div>
+
+    <div style="background:var(--light-green);border-radius:10px;padding:20px 28px;border-left:5px solid var(--green);margin-top:20px;display:flex;align-items:center;gap:20px;">
+      <div style="font-size:36px;flex-shrink:0;">🏫</div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:4px;">Ziel</div>
+        <div style="font-size:13px;color:#333;line-height:1.7;">Alle verbleibenden Mittel fließen in die Anschaffung von <strong>Einrichtungsgegenständen und Materialien</strong> für die Kita Wittlensweiler.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ IMPRESSUM TAB ═══════ -->
+  <div class="tab-panel" id="tab-impressum">
+    <div class="laufkarte-hero" style="background:var(--light-blue);border-top-color:var(--blue);">
+      <div class="section-label" style="color:var(--blue);">Impressum</div>
+      <p>Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV</p>
+    </div>
+
+    <!-- Kontaktblock -->
+    <div style="background:#fff;border-radius:10px;padding:28px 32px;border-left:5px solid var(--blue);box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:20px;font-size:14px;line-height:1.8;color:#333;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Anbieter</div>
+      <p style="font-weight:700;font-size:15px;color:var(--blue);margin-bottom:4px;">Evangelischer Kirchenbezirk Freudenstadt</p>
+      <p>Justinus-Kerner-Str. 10<br>72250 Freudenstadt</p>
+      <p style="margin-top:10px;">
+        Telefon: <a href="tel:+4974419156910" style="color:var(--blue);text-decoration:none;font-weight:600;">+49 7441 9156910</a><br>
+        E-Mail: <a href="mailto:dekanatamt.freudenstadt@elkw.de" style="color:var(--blue);text-decoration:none;font-weight:600;">dekanatamt.freudenstadt@elkw.de</a>
+      </p>
+      <p style="margin-top:12px;font-size:13px;color:#555;">Vertreten durch: <strong>Dekan Andreas Streich</strong> (zugleich verantwortlich i.S.v. § 18 Abs. 2 MStV und § 5 DDG).</p>
+      <p style="font-size:13px;color:#555;">Der Evangelische Kirchenbezirk Freudenstadt gehört der Evangelischen Landeskirche in Württemberg an.</p>
+    </div>
+
+    <!-- Website-Hinweis -->
+    <div style="background:var(--light-blue);border-radius:10px;padding:20px 28px;border-left:5px solid var(--blue);margin-bottom:20px;font-size:13px;color:#444;line-height:1.7;">
+      Diese Website wurde erstellt mit einem Internet-Gemeindebaukasten des Evangelischen Medienhauses Stuttgart. Mehr Informationen unter <a href="https://www.gemeindebaukasten.de" target="_blank" style="color:var(--blue);font-weight:600;">www.gemeindebaukasten.de</a>.
+    </div>
+
+    <!-- Haftungsausschluss-Abschnitte -->
+    <div style="background:#fff;border-radius:10px;padding:28px 32px;border-left:5px solid var(--blue);box-shadow:0 2px 12px rgba(0,0,0,.08);font-size:14px;line-height:1.8;color:#333;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue);margin-bottom:20px;">Haftungsausschluss</div>
+
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">1. Inhalt des Onlineangebotes</div>
+        <p>Unsere Inhalte sind sorgfältig recherchiert und erstellt. Dennoch können wir keinerlei Gewähr für die Aktualität, Korrektheit oder Vollständigkeit der bereitgestellten Informationen übernehmen. Haftungsansprüche gegen die oben aufgeführte Stelle, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden sind grundsätzlich ausgeschlossen, sofern seitens der Stelle kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.</p>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">2. Verweise und Links</div>
+        <p>Die oben aufgeführte Stelle ist nur für die „eigenen Inhalte" dieser Internetseite nach den einschlägigen Gesetzen verantwortlich. Von diesen eigenen Inhalten sind Verweise („Links") zu anderen Internetauftritten zu unterscheiden. Durch Links halten wir „fremde Inhalte" zur Nutzung bereit. Zum Zeitpunkt der Verlinkung haben wir den fremden Inhalt der verlinkten Internetseiten daraufhin überprüft, dass durch ihn keine mögliche zivilrechtliche oder strafrechtliche Verantwortlichkeit ausgelöst wird. Wir können jedoch nicht ständig die Links auf unserer Internetseite auf Veränderungen, die eine Verantwortlichkeit neu begründen könnten, kontrollieren. Wenn Sie den Eindruck haben, dass ein Link in unserem Internetauftritt zu fremden Internetseiten mit rechtswidrigem oder strafrechtlichem Inhalt führt, geben Sie uns bitte Bescheid, damit wir diesen Link prüfen und gegebenenfalls entfernen können.</p>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">3. Urheber- und Kennzeichenrecht</div>
+        <p>Die oben aufgeführte Stelle ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihr selbst erstellte Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind. Das ‚Copyright' für veröffentlichte, von der Stelle selbst erstellte Objekte bleibt allein bei den Autoren der Seiten. Eine Vervielfältigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung der Stelle nicht gestattet.</p>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;">4. Rechtswirksamkeit dieses Haftungsausschlusses</div>
+        <p>Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Internetseite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile in ihrem Inhalt und ihrer Gültigkeit davon unberührt.</p>
+      </div>
+
+      <div style="font-size:12px;color:#888;border-top:1px solid #eee;padding-top:12px;margin-top:8px;">Stand: 15.03.2026</div>
+    </div>
+  </div>
+
+  <!-- ═══════ HAFTUNGSAUSSCHLUSS TAB ═══════ -->
+  <div class="tab-panel" id="tab-haftung">
+    <div class="laufkarte-hero" style="background:var(--light-red);border-top-color:var(--red);">
+      <div class="section-label" style="color:var(--red);">Haftungsausschluss</div>
+      <p>Haftungsausschluss für den Garagenflohmarkt der Kita</p>
+    </div>
+    <div style="background:#fff;border-radius:10px;padding:32px;border-left:5px solid var(--red);box-shadow:0 2px 12px rgba(0,0,0,.08);font-size:14px;line-height:1.8;color:#333;">
+      <p style="margin-bottom:20px;">Der Garagenflohmarkt der Kita findet dezentral im gesamten Ort statt. Die Teilnahme erfolgt auf eigene Gefahr. Nachfolgend informieren wir über die geltenden Haftungsregelungen.</p>
+
+      <div style="margin-bottom:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">1. Haftung für Unfälle und Schäden auf Wegen und im Veranstaltungsbereich</div>
+        <p style="margin-bottom:12px;">Die Kita, der Träger sowie die Veranstalter*innen übernehmen keine Haftung für Personen‑ oder Sachschäden, die auf dem Weg zu den einzelnen Verkaufsständen, zwischen den Ständen oder auf dem Kita‑Gelände entstehen, soweit keine zwingenden gesetzlichen Haftungsgründe entgegenstehen (insbesondere Vorsatz oder grobe Fahrlässigkeit).</p>
+        <p style="margin-bottom:8px;font-weight:600;color:#555;">Dies umfasst ausdrücklich:</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:5px 0 5px 20px;border-left:3px solid var(--red);margin-bottom:6px;padding-left:16px;">öffentliche Wege und Straßen im gesamten Ortsgebiet</li>
+          <li style="padding:5px 0 5px 20px;border-left:3px solid var(--red);margin-bottom:6px;padding-left:16px;">private Zufahrten und Grundstücksbereiche, auf denen Verkaufsstände eingerichtet sind</li>
+          <li style="padding:5px 0 5px 20px;border-left:3px solid var(--red);margin-bottom:6px;padding-left:16px;">das gesamte Kita‑Gelände einschließlich Außenflächen</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">2. Haftung für Diebstahl und Schäden an Verkaufsständen</div>
+        <p>Für Diebstahl, Verlust oder Beschädigung von Waren, Ausstattungsgegenständen oder persönlichen Gegenständen an den Verkaufsständen wird keine Haftung übernommen. Die Verantwortung für Aufbau, Sicherung und Beaufsichtigung der Verkaufsstände liegt ausschließlich bei den jeweiligen privaten Verkäufer*innen.</p>
+      </div>
+
+      <div style="margin-bottom:8px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">3. Aufsichtspflicht</div>
+        <p>Während der gesamten Veranstaltung – einschließlich der Nutzung der Hüpfburg sowie aller weiteren Spiel‑ und Bewegungsangebote – liegt die Aufsichtspflicht uneingeschränkt bei den Eltern bzw. Erziehungsberechtigten. Die Kita übernimmt während des Flohmarkts keine Betreuung und keine Beaufsichtigung der anwesenden Kinder.</p>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <footer>
@@ -650,8 +753,6 @@
     <span class="fr">Eintritt frei · Für alle offen</span>
   </div>
 </footer>
-
-<div class="color-bar"><div class="cb1"></div><div class="cb2"></div><div class="cb3"></div><div class="cb4"></div></div>
 
 </body>
 </html>
